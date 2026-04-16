@@ -1,15 +1,6 @@
 # ETP4A - Initiation à Ruby on Rails : ActiveRecord & Modèles de BDD
 
 **Thème :** Passage de SQL à ActiveRecord - Migrations, Modèles et Console Rails
-
----
-
-## Nom du dépôt GitHub recommandé
-
-```
-etp4a-rails-activerecord
-```
-
 ---
 
 ## Description du projet
