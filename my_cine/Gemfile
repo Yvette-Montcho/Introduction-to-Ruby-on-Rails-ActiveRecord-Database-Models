@@ -1,0 +1,64 @@
+# Gemfile
+# ============================================================
+# Gestion des dépendances de l'application MYciné
+# ============================================================
+# Ce fichier liste toutes les gems (bibliothèques Ruby) nécessaires
+# au fonctionnement de l'application.
+#
+# Après toute modification de ce fichier, exécuter :
+#   $ bundle install
+# ============================================================
+
+# Source officielle des gems Ruby (RubyGems.org)
+source 'https://rubygems.org'
+
+# Version de Ruby requise pour cette application
+# Vérifier votre version avec : ruby -v
+ruby '3.2.0'
+
+# --------------------------------------------------------
+# FRAMEWORK PRINCIPAL
+# --------------------------------------------------------
+
+# Ruby on Rails — framework web MVC complet
+# Inclut ActiveRecord (ORM), ActionController, ActionView, etc.
+# Documentation : https://guides.rubyonrails.org
+gem 'rails', '~> 7.0'
+
+# --------------------------------------------------------
+# BASE DE DONNÉES
+# --------------------------------------------------------
+
+# SQLite3 — base de données légère pour le développement local
+# Idéale pour les projets de formation (pas de serveur nécessaire)
+# Remplacée par PostgreSQL ou MySQL en production
+gem 'sqlite3', '~> 1.4'
+
+# --------------------------------------------------------
+# SERVEUR WEB
+# --------------------------------------------------------
+
+# Puma — serveur HTTP multi-threads performant
+# Utilisé par défaut par Rails pour le serveur de développement
+gem 'puma', '~> 5.0'
+
+# --------------------------------------------------------
+# GEMS DE DÉVELOPPEMENT ET TEST
+# --------------------------------------------------------
+# Ces gems ne sont chargées que dans les environnements de dev et test
+group :development, :test do
+  # Faker — génération de données fictives réalistes
+  # Utilisé dans db/seeds.rb pour créer des films aléatoires
+  # Documentation : https://github.com/faker-ruby/faker
+  gem 'faker'
+end
+
+group :development do
+  # Table Print — affichage des données en tableau dans la console Rails
+  # Utilisé avec : tp Movie.all
+  # Documentation : https://github.com/arches/table_print
+  gem 'table_print'
+
+  # Spring — préchargeur d'application pour accélérer les commandes Rails
+  gem 'spring'
+end

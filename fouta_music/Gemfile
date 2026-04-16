@@ -1,0 +1,53 @@
+# Gemfile
+# ============================================================
+# Gestion des dépendances de l'application Fouta Music
+# ============================================================
+# Ce fichier liste toutes les gems (bibliothèques Ruby) nécessaires
+# au fonctionnement de l'application.
+#
+# Après toute modification de ce fichier, exécuter :
+#   $ bundle install
+# ============================================================
+
+# Source officielle des gems Ruby (RubyGems.org)
+source 'https://rubygems.org'
+
+# Version de Ruby requise pour cette application
+# Vérifier votre version avec : ruby -v
+ruby '3.2.0'
+
+# --------------------------------------------------------
+# FRAMEWORK PRINCIPAL
+# --------------------------------------------------------
+
+# Ruby on Rails — framework web MVC complet
+# Inclut ActiveRecord pour la gestion de la BDD, ActionController, etc.
+gem 'rails', '~> 7.0'
+
+# --------------------------------------------------------
+# BASE DE DONNÉES
+# --------------------------------------------------------
+
+# SQLite3 — base de données légère et sans serveur pour le développement
+# Parfaite pour les projets éducatifs et locaux
+gem 'sqlite3', '~> 1.4'
+
+# --------------------------------------------------------
+# SERVEUR WEB
+# --------------------------------------------------------
+
+# Puma — serveur HTTP rapide et multi-threads intégré à Rails
+gem 'puma', '~> 5.0'
+
+# --------------------------------------------------------
+# GEMS DE DÉVELOPPEMENT
+# --------------------------------------------------------
+group :development do
+  # Table Print — affichage des données en tableau ASCII dans la console
+  # Utilisation : tp Album.all  ou  tp Track.where(artist: 'AC/DC')
+  # Documentation : https://github.com/arches/table_print
+  gem 'table_print'
+
+  # Spring — préchargeur d'application Rails
+  gem 'spring'
+end
