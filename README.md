@@ -1,4 +1,4 @@
-# ETP4A - Initiation à Ruby on Rails : ActiveRecord & Modèles de BDD
+# Initiation à Ruby on Rails : ActiveRecord & Modèles de BDD
 
 **Thème :** Passage de SQL à ActiveRecord - Migrations, Modèles et Console Rails
 ---
